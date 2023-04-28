@@ -1,0 +1,10 @@
+version: "3"
+services:
+  apache:
+    build: apache
+    ports:
+      - 8000:80
+      - 8443:443
+    volumes:
+      - ./congreso:/app
+      - ./apache/congreso.conf:/etc/apache2/sites-enabled/congreso.conf
